@@ -1,0 +1,29 @@
+{
+  "name": "template-starter-kit",
+  "version": "1.0.0",
+  "description": "Starter kit for developing templates(html+css+js)",
+  "main": "",
+  "scripts": {
+    "onchange": "onchange",
+    "sleep": "sleep 1",
+    "build-bootstrap": "sass bootstrap/bootstrap.scss:assets/css/bootstrap.css && rtlcss assets/css/bootstrap.css assets/css/bootstrap.rtl.css",
+    "sass": "sass sass/main.scss:assets/css/style.css",
+    "prefix:css": "postcss assets/css/style.css --use autoprefixer -o assets/css/style.css",
+    "rtl": "rtlcss assets/css/style.css assets/css/style.rtl.css",
+    "dev": "npm-run-all --parallel \"sass -- --watch --poll\" \"prefix:css -- --watch\" \"onchange -- 'assets/css/style.css' -- npm run rtl\"",
+    "build": "npm-run-all sass prefix:css rtl"
+  },
+  "author": "M0H314-hasani",
+  "license": "",
+  "devDependencies": {
+    "autoprefixer": "",
+    "bootstrap": "",
+    "npm-run-all": "",
+    "onchange": "",
+    "postcss": "",
+    "postcss-cli": "",
+    "rtlcss": "",
+    "sass": "",
+    "sleep.cmd": ""
+  }
+}

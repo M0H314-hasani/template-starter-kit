@@ -1,0 +1,157 @@
+.swiper {
+  &-pagination {
+    &-bullet {
+      width: 14px;
+      height: 14px;
+      opacity: 1;
+      background: transparent;
+      border: 1px solid $primary;
+      transition: all 0.3s;
+
+      &-active {
+        width: 32px;
+        border-radius: 50px;
+        background: $primary;
+      }
+    }
+
+    &--thin & {
+      &-bullet {
+        --swiper-pagination-bullet-horizontal-gap: 2px;
+
+        width: 10px;
+        height: 10px;
+
+        &-active {
+          width: 18px;
+        }
+      }
+    }
+
+    &--start {
+      left: 10px !important;
+      text-align: start;
+    }
+
+    &--end {
+      right: 10px !important;
+      text-align: end;
+    }
+  }
+
+  &-button {
+    &-disabled {
+      opacity: 0.5 !important;
+    }
+
+    &-next {
+      width: 32px;
+      height: 32px;
+      border: 1px solid $orange;
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out;
+      left: unset;
+      right: 10px;
+
+      &::after {
+        content: "" !important;
+        display: block;
+        $background-ltr: 'data:image/svg+xml;utf8,<svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+        $background-rtl: 'data:image/svg+xml;utf8,<svg transform="rotate(0)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+        background: url($background-ltr) #{"/* rtl: url('#{$background-rtl}') */"};
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 22px;
+      }
+
+      &:hover {
+        border-color: $orange;
+        background-color: $orange;
+
+        &::after {
+          $background-ltr: 'data:image/svg+xml;utf8,<svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+          $background-rtl: 'data:image/svg+xml;utf8,<svg transform="rotate(0)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+          background: url($background-ltr) #{"/* rtl: url('#{$background-rtl}') */"};
+          background-size: 100% 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &-prev {
+      width: 32px;
+      height: 32px;
+      border: 1px solid $orange;
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out;
+      right: unset;
+      left: 10px;
+
+      &::after {
+        content: "" !important;
+        display: block;
+        $background-ltr: 'data:image/svg+xml;utf8,<svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+        $background-rtl: 'data:image/svg+xml;utf8,<svg transform="rotate(0)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+        background: url($background-ltr) #{"/* rtl: url('#{$background-rtl}') */"};
+        background-size: 100% 100%;
+        background-position: center;
+        width: 22px;
+        height: 22px;
+      }
+
+      &:hover {
+        border-color: $orange;
+        background-color: $orange;
+
+        &::after {
+          $background-ltr: 'data:image/svg+xml;utf8,<svg transform="rotate(180)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+          $background-rtl: 'data:image/svg+xml;utf8,<svg transform="rotate(0)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23#{str-slice(#{$orange}, 2)}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+          background: url($background-ltr) #{"/* rtl: url('#{$background-rtl}') */"};
+          background-size: 100% 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &-button {
+    $p: &;
+    &--sm {
+      &#{$p + "-next"} {
+        width: 24px !important;
+        height: 24px !important;
+
+        &::after {
+          width: 20px !important;
+          height: 20px !important;
+        }
+      }
+
+      &#{$p + "-prev"} {
+        width: 24px !important;
+        height: 24px !important;
+
+        &::after {
+          width: 20px !important;
+          height: 20px !important;
+        }
+      }
+    }
+
+    &--left-bottom {
+      &#{$p + "-next"} {
+        position: inherit;
+        display: block;
+      }
+
+      &#{$p + "-prev"} {
+        display: block;
+        position: initial;
+      }
+    }
+  }
+}
